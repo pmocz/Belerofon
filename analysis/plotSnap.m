@@ -13,7 +13,7 @@ Lbox    = beta^-1;
 b = 1;
 G = 1;
 
-snap = 30;
+snap = 1;10;
 
 simDir = '../output/';
 
@@ -33,7 +33,7 @@ imagesc(log10(mean(abs(psi).^2,3)))
 axis square
 colorbar
 caxis([-.01 .01])
-caxis([-1 1])
+%caxis([-1 1])
 
 
 
