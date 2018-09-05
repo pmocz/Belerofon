@@ -3,6 +3,15 @@ CONFIG      = Config.sh
 BUILD_DIR   = build
 SRC_DIR     = src
 
+ifdef SYSTYPE
+SYSTYPE := "$(SYSTYPE)"
+else
+SYSTYPE := "default"
+endif
+
+$(info Build configuration:)
+$(info SYSTYPE: $(SYSTYPE))
+
 
 
 CC          = gcc
@@ -14,6 +23,17 @@ FFTW_INCL   = -I/usr/local/include
 FFTW_LIB    = -L/usr/local/lib  -lfftw3_omp -lfftw3 -lm
 LINKER      = gcc
 
+
+ifeq ($(SYSTYPE),"tiger")
+CC          = mpicc
+CPP         = mpicc
+OPTIMIZE    = -std=c99 -fopenmp -O3 -m64 -g -Wall -Wno-unknown-pragmas
+HDF5_INCL   = 
+HDF5_LIB    = -L$(LD_LIBRARY_PATH) -lhdf5 -lsz -lz -ldl -lm
+FFTW_INCL   = 
+FFTW_LIB    = -lfftw3_omp -lfftw3 -lm
+LINKER      = mpicc
+endif
 
 
 ############################################

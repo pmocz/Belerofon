@@ -200,7 +200,7 @@ void updatePotential(void) {
 #if GSWITCH == 1
 	fftw_execute(plan_fft_V);
 	#pragma omp parallel for
-	for(i = 0; i < N*N*N; i++) {
+	for(i = 0; i < N*N*(N/2+1); i++) {
 		// after an r2c transform, the output is N x N x (N/2+1) 
 		// i,j goes from 0,...,N-1 
 		// k goes from 0,...,N/2   since Fhat(-k) = Fhat(k)^*
