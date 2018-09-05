@@ -9,7 +9,7 @@
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
-#SBATCH --mem=10000     # 80000 for 1024^3 run
+#SBATCH --mem=32000     # 80000 for 1024^3 run
 
 module purge
 module load intel
