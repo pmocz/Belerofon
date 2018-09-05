@@ -1,5 +1,7 @@
-Philip Mocz (c)
-August 2018
+Philip Mocz
+
+2018
+
 Princeton University
 
 
@@ -11,6 +13,13 @@ High-performance Spectral Solver for the Gross-Pitaevskii Poisson equations
   * written in C
   * uses FFTW3, HDF5
   * ideal for 1024^3 runs
+
+
+## How to compile
+
+```
+make clean; make
+```
 
 
 ## How to run
@@ -30,7 +39,7 @@ make install
 ```
 
 
-## References
+## Technical References
 
 http://www.fftw.org/fftw3_doc/What-FFTW-Really-Computes.html#What-FFTW-Really-Computes
 http://davis.lbl.gov/Manuals/HDF5-1.6.1/Intro/IntroExamples.html
