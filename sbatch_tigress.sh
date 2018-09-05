@@ -2,7 +2,7 @@
 #SBATCH -J bfn512
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=40
-#SBATCH -t 0:12:00
+#SBATCH -t 0:06:00
 #SBATCH -o output/OUTPUT.lsf
 #SBATCH -e output/ERROR.lsf
 #SBATCH --mail-user=philip.mocz@gmail.com
