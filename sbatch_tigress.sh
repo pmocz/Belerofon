@@ -16,6 +16,6 @@ module load intel
 module load openmpi
 module load fftw
 
-srun ./belerofon 40 > output/OUTPUT.$SLURM_JOB_ID
+./belerofon 40 > output/OUTPUT.$SLURM_JOB_ID
 
 
