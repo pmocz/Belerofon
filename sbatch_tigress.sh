@@ -2,7 +2,7 @@
 #SBATCH -J bfn512
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=40
-#SBATCH -t 06:00:00
+#SBATCH -t 01:00:00
 #SBATCH -o output/OUTPUT.lsf
 #SBATCH -e output/ERROR.lsf
 #SBATCH --mail-user=philip.mocz@gmail.com
@@ -16,6 +16,6 @@ module load intel
 module load openmpi
 module load fftw
 
-./belerofon 40 > output/OUTPUT.$SLURM_JOB_ID
+srun -u -n 1  --tasks-per-node=40 ./belerofon 40
 
 
