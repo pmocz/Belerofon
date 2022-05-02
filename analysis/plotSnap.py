@@ -4,14 +4,14 @@ import h5py
 
 
 # parameters
-N       = 64     # resolution
+N       = 128     # resolution
 beta    = 0.06   # gravity
 Lbox    = 1.0/beta
 
 b = 1
 G = 1
 
-snap = 20
+snap = 0
 
 simDir = '../output/'
 
@@ -26,7 +26,7 @@ rho = f.get('/psiRe')[()]**2 + f.get('/psiIm')[()]**2
 
 # plot snapshot
 
-plt.imshow(np.log10(np.mean(rho,2)), cmap="plasma")
+plt.imshow(np.log10(np.mean(rho,2)), cmap="plasma", clim=(-1.4,1.4))
 plt.axis('off')
 plt.savefig("snap" + '%03d' % (snap) + ".png", bbox_inches='tight')
 plt.show()
