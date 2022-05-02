@@ -30,13 +30,22 @@ to run on 4 threads ...
 ```
 
 
-## Installing fftw3 for yourself
+## Installing fftw3 
 
 ```
 ./configure CC=mpicc --enable-threads --enable-openmp
 make
 make install
 ```
+
+## Simulation Description
+
+Start with a random initial condition and watch for the phase transition and formation of solitons.
+
+![initial condition](analysis/snap000.png "initial condition")
+
+![initial condition](analysis/snap020.png "evolved state")
+
 
 
 ## Technical References
