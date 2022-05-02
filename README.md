@@ -43,9 +43,11 @@ make install
 Start with a random initial condition and watch for the phase transition and formation of solitons.
 
 E.g. 64 x 64 x 64 initial condition:
+
 ![initial condition](analysis/snap000.png "initial condition")
 
 Evolved State:
+
 ![initial condition](analysis/snap020.png "evolved state")
 
 
